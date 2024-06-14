@@ -2,11 +2,9 @@ return {
   "tomasky/bookmarks.nvim",
   -- after = "telescope.nvim",
   event = "VimEnter",
-  lazy = false,
   config = function()
     require("bookmarks").setup({
-      scoped = false,
-      -- sign_priority = 8,  --set bookmark sign priority to cover other sign
+      sign_priority = 8, --set bookmark sign priority to cover other sign
       save_file = vim.fn.expand("$HOME/.bookmarks"), -- bookmarks save file path
       keywords = {
         ["@t"] = "☑️ ", -- mark annotation startswith @t ,signs this icon as `Todo`
@@ -28,4 +26,3 @@ return {
     require("telescope").load_extension("bookmarks")
   end,
 }
-
