@@ -49,11 +49,14 @@ return {
         end
 	opts.commands.spectre  = function(state)
 				local p = do_setcd(state)
-				require('spectre').open({
-				  is_insert_mode = true,
-				  cwd = p,
-				  is_close = false, -- close an exists instance of spectre and open new
-				})
+      require("grug-far").grug_far({ prefills = { paths = p } })
+
+      -- require("spectre").open({
+      --   is_insert_mode = true,
+      --   cwd = p,
+      --   is_close = false, -- close an exists instance of spectre and open new
+      -- })
+
         end
         
         opts.window.mappings.L = "copy_locate_path"
