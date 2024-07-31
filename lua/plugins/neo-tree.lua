@@ -130,7 +130,7 @@ return {
           end
         end
       opts.window.mappings.h =  "parent_or_close"
-
+	    opts.window.width = 30
 
 
     end
