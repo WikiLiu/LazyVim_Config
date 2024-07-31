@@ -8,6 +8,7 @@
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
 local Util = require("lazyvim.util")
+vim.keymap.set("n", "<leader>cs", "<cmd>SymbolsOutline<cr>", { desc = "Symbols Outline" })
 vim.keymap.set("n", "<F7>", '<Cmd>execute v:count . "ToggleTerm"<CR>', { desc = "Term with border" })
 vim.keymap.set("n", "<leader>or", "<cmd>OverseerRun<cr>", { desc = "Overseer Run Task" })
 vim.keymap.set("n", "<leader>df", "<cmd>DiffFormatFile<cr>", { desc = "Diff format File" })
